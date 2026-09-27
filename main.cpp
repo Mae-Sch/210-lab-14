@@ -44,8 +44,32 @@ void Color::setBlue(int blue) {
 }
 
 void Color::print() {
-    cout << setw(10) << "Red:" << setw(5) << this->red;
-    cout << setw(10) << "Green:" << setw(5) << this->green;
-    cout << setw(10) << "Blue:" << setw(5) << this->blue;
+    cout << setw(10) << "Red:" << setw(5) << this->getRed();
+    cout << setw(10) << "Green:" << setw(5) << this->getGreen();
+    cout << setw(10) << "Blue:" << setw(5) << this->getBlue();
     cout << endl;
+}
+
+int main() {
+    const int NUM_COLORS = 3;
+    Color colors[NUM_COLORS];
+    for (int i = 0; i < NUM_COLORS; ++i) {
+        int tempValue;
+        cout << "red value of color #" << (i + 1) << " is: ";
+        cin >> tempValue;
+        colors[i].setRed(tempValue);
+        cout << "green value of color #" << (i + 1) << " is: ";
+        cin >> tempValue;
+        colors[i].setGreen(tempValue);
+        cout << "blue value of color #" << (i + 1) << " is: ";
+        cin >> tempValue;
+        colors[i].setBlue(tempValue);
+    }
+
+    cout << "\n\nDisplaying Colors\n\n";
+    for (int i = 0; i < NUM_COLORS; ++i) {
+        cout << "Color #" << (i + 1) << ":\n"
+        colors[i].print();
+        cout << endl << endl;
+    }
 }
