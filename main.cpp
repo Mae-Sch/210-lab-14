@@ -68,8 +68,10 @@ int main() {
 
     cout << "\n\nDisplaying Colors\n\n";
     for (int i = 0; i < NUM_COLORS; ++i) {
-        cout << "Color #" << (i + 1) << ":\n"
+        cout << "Color #" << (i + 1) << ":\n";
         colors[i].print();
         cout << endl << endl;
     }
+
+    return 1;
 }
