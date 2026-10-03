@@ -11,7 +11,7 @@ class Color {
     public:
     Color() { red = 0; green = 0; blue = 0; }
     Color(int r, int g, int b) { red = r; green = g; blue = b; }
-    Color(int r) { red = r; }
+    Color(int r) { red = r; green = 0; blue = 0; }
     int getRed() const;
     int getGreen() const;
     int getBlue() const;
@@ -62,14 +62,21 @@ int main() {
         cin >> tempGreen;
         cout << "blue value of color #" << 1 << " is: ";
         cin >> tempBlue;
-	Color color1(tempRed, tempGreen, tempBlue);
+	Color colorOne(tempRed, tempGreen, tempBlue);
+    cout << "red value of color #2 is: ";
+    cin >> tempRed;
+    Color colorTwo(tempRed);
+    Color colorThree;
 
+// sorry for the less than perfect formatting, I'm coding from shell because my laptop won't boot properly
     cout << "\n\nDisplaying Colors\n\n";
-    for (int i = 0; i < NUM_COLORS; ++i) {
-        cout << "Color #" << (i + 1) << ":\n";
-        colors[i].print();
+        cout << "Color #" << 1 << ":\n";
+        colorOne.print();
+	cout << "Color #2:\n";
+	colorTwo.print();
+	cout << "Color #3:\n";
+	colorThree.print();
         cout << endl << endl;
-    }
 
     return 1;
 }
