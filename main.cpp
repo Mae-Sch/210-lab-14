@@ -9,6 +9,9 @@ class Color {
     int blue;
 
     public:
+    Color() { red = 0; green = 0; blue = 0; }
+    Color(int r, int g, int b) { red = r; green = g; blue = b; }
+    Color(int r) { red = r; }
     int getRed() const;
     int getGreen() const;
     int getBlue() const;
