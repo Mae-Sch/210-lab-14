@@ -55,19 +55,14 @@ void Color::print() {
 
 int main() {
     const int NUM_COLORS = 3;
-    Color colors[NUM_COLORS];
-    for (int i = 0; i < NUM_COLORS; ++i) {
-        int tempValue;
-        cout << "red value of color #" << (i + 1) << " is: ";
-        cin >> tempValue;
-        colors[i].setRed(tempValue);
-        cout << "green value of color #" << (i + 1) << " is: ";
-        cin >> tempValue;
-        colors[i].setGreen(tempValue);
-        cout << "blue value of color #" << (i + 1) << " is: ";
-        cin >> tempValue;
-        colors[i].setBlue(tempValue);
-    }
+        int tempRed, tempGreen, tempBlue;
+        cout << "red value of color #" << 1 << " is: ";
+        cin >> tempRed;
+        cout << "green value of color #" << 1 << " is: ";
+        cin >> tempGreen;
+        cout << "blue value of color #" << 1 << " is: ";
+        cin >> tempBlue;
+	Color color1(tempRed, tempGreen, tempBlue);
 
     cout << "\n\nDisplaying Colors\n\n";
     for (int i = 0; i < NUM_COLORS; ++i) {
